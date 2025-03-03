@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-body{
-    background: #A1FFCE;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        font-family: 'Courier New', Courier, monospace;
+main{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,22 +20,24 @@ h1{
     margin-bottom: 10px;
 }
 
-h4{
-    padding: 10px;
+.fun{
+    background: #1E9600;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 button{
-    padding: 15px;
+    height: 100px;
     width: 100px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 50%;
     border: 1px solid;
     transition: .3s;
-    background-color: teal;
+    background-color: red;
     cursor: pointer;
 }
 
-button:hover{
-    background-color: rgb(46, 160, 149);
+button:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
 }
-

@@ -1,13 +1,13 @@
-const activityName = document.getElementById('activity-name');
 const btn = document.getElementById('btn');
 
 btn.addEventListener('click', () => {
-    document.getElementById('title').textContent = 'FunBot🎮'
     const url = 'https://apis.scrimba.com/bored/api/activity';
     fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            activityName.textContent = data.activity;
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('activity-name').textContent = data.activity;
+        document.getElementById('title').textContent = 'FunBot🎮'
+        document.querySelector('main').classList = 'fun'
         });
 })
 
