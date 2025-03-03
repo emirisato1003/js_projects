@@ -6,38 +6,33 @@
 
 body{
     background-color: #ddd;
-    height: 100vh;
+}
+
+nav{
+    background-color: coral;
+    height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
 }
 
 .blog{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:9px;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding:40px 20px;
 }
 
 .singlePost{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 300px;
     height: 200px;
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 15px;
+    border-bottom: 1px solid;
 }
 
-.singlePost h1{
-    font-size: 1.2rem;
-}
 
 .singlePost p{
-    font-size: .9rem;
-    margin-top: 10px;
     color: #aaa;
 }
