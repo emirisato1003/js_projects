@@ -14,4 +14,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts", { method: "GET" })
         document.getElementById('blog').innerHTML = posts.join('');
     });
 
-document.querySelector('button').addEventListener("click", () => console.log('clicked'));
+document.querySelector('button').addEventListener("click", () => {
+    preventDefault();
+    console.log('clicked');
+});
