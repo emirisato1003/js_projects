@@ -4,7 +4,78 @@
     box-sizing: border-box;
 }
 
-.container{
+body{
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    column-gap: 100px;
+    grid-template: auto auto / 1fr 1fr;
+    background-color: #1B244A;
+    color: #eee;
+    padding: 10em 10em;
+}
+
+.score-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+}
+
+.score-container h3{
+    font-size: 2.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+
+.score-screen{
+    background-color: #080001;
+    color: #F94F6D;
+    font-family: 'Press Start 2P', system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 5.625rem;
+    padding: 35px 40px 20px 45px;
+}
+
+button{
+    background: transparent;
+    border: 1px solid #9AABD8;
+    color:#9AABD8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.score-btn button{
+    font-size: 1.4rem;
+    padding: 15px;
+    margin: 9px;
+}
+
+button.new-game-btn{
+    width: 100px;
+    margin: 20px auto 0;
+    padding: 10px;
+    grid-column: 1 / -1;
+}
+
+
+@media (max-width: 640px) {
+    .container{
+        gap: 100px;
+        padding: 69px 83px;
+    }
+    
+    .score-container{
+        gap: 21px;
+    }
+    
+    .score-container h3{
+        font-size: 2.5rem;
+        font-family: 'Nunito Sans', sans-serif
+    }
+    
 }
