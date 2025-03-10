@@ -5,40 +5,19 @@ let guestScore = 0;
 const getHomeScore = document.getElementById('home-score');
 const getGuestScore = document.getElementById('guest-score');
 const timer = document.getElementById('timer');
-timer.textContent = "00:00";
+
 console.log(timer);
 
-function homeScoreAdd1() {
-    homeScore += 1;
+function homeScoreAdd(point) {
+    homeScore += point;
+    console.log(homeScore)
     getHomeScore.textContent = homeScore;
 }
 
-function homeScoreAdd2() {
-    homeScore += 2;
-    getHomeScore.textContent = homeScore;
-}
-
-function homeScoreAdd3() {
-    homeScore += 3;
-    getHomeScore.textContent = homeScore;
-}
-
-
-function guestScoreAdd1() {
-    guestScore += 1;
+function guestScoreAdd(point) {
+    guestScore += point;
     getGuestScore.textContent = guestScore;
 }
-
-function guestScoreAdd2() {
-    guestScore += 2;
-    getGuestScore.textContent = guestScore;
-}
-
-function guestScoreAdd3() {
-    guestScore += 3;
-    getGuestScore.textContent = guestScore;
-}
-
 
 function reset() {
     homeScore = 0;
