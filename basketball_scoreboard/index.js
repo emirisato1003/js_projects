@@ -4,7 +4,9 @@ let guestScore = 0;
 
 const getHomeScore = document.getElementById('home-score');
 const getGuestScore = document.getElementById('guest-score');
-console.log(homeScore, guestScore);
+const timer = document.getElementById('timer');
+timer.textContent = "00:00";
+console.log(timer);
 
 function homeScoreAdd1() {
     homeScore += 1;
