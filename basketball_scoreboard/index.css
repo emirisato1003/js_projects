@@ -33,15 +33,27 @@ body{
     font-weight: bold;
 }
 
-.additionalInfo{
+.foul-container{
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    align-items: center;
+    gap: 10px;
 }
 
-.foul{
+.foul {
+    background-color: #080001;
+    color: aqua;
+    width: 100px;
+    height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family:'Press Start 2P', system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.foul-container button{
+    padding: 5px 10px;
 }
 
 .timer{
@@ -53,7 +65,8 @@ body{
     justify-content: center;
     height: 200px;
     width: 600px;
-    border: 1px solid #eee
+    border: 1px solid #eee;
+    align-self: center;
 }
 
 .score-screen{
