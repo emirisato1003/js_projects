@@ -2,15 +2,19 @@
 let homeScore = 0;
 let guestScore = 0;
 
+let homeFoul = 0;
+let guestFoul = 0;
+
 const getHomeScore = document.getElementById('home-score');
+const getHomeFoul = document.getElementById('home-foul');
 const getGuestScore = document.getElementById('guest-score');
+const getGuestFoul = document.getElementById('guest-foul');
 const timer = document.getElementById('timer');
 
-console.log(timer);
+// console.log(timer);
 
 function homeScoreAdd(point) {
     homeScore += point;
-    console.log(homeScore)
     getHomeScore.textContent = homeScore;
 }
 
@@ -19,9 +23,26 @@ function guestScoreAdd(point) {
     getGuestScore.textContent = guestScore;
 }
 
+
+function homeFoulAdd() {
+    homeFoul += 1;
+    getHomeFoul.textContent = homeFoul;
+}
+
+function guestFoulAdd() {
+    guestFoul += 1;
+    getGuestFoul.textContent = guestFoul;
+}
+
 function reset() {
     homeScore = 0;
     guestScore = 0;
-    getGuestScore.textContent = homeScore;
-    getHomeScore.textContent = guestScore;
+    homeFoul = 0;
+    guestFoul = 0;
+
+    getGuestScore.textContent = guestScore;
+    getGuestFoul.textContent = guestFoul
+    getHomeScore.textContent = homeScore;
+    getHomeFoul.textContent = homeFoul
+
 }
