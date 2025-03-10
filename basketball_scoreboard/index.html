@@ -14,6 +14,10 @@
 <body>
     <div class="container">
         <div class="score-container">
+            <div class="home-foul">
+                <p>1</p>
+                <button>foul</button>
+            </div>
             <h3>HOME</h3>
             <div class="score-screen" id="home-score">
                 0
@@ -24,7 +28,12 @@
                 <button onclick="homeScoreAdd(3)">+3</button>
             </div>
         </div>
+        <div class="timer" id="timer">48:00</div>
         <div class="score-container">
+            <div class="guest-foul">
+                <p>1</p>
+                <button>foul</button>
+            </div>
             <h3>GUEST</h3>
             <div class="score-screen" id="guest-score">
                 0
