@@ -28,7 +28,16 @@
                 <button onclick="homeScoreAdd(3)">+3</button>
             </div>
         </div>
-        <div class="timer" id="timer">48:00</div>
+        <div class="timer-container">
+            <div class="showTimer" id="showTimer">
+                <div class="timer" id="timer"></div>
+                <button onclick="showEditTimer()">Edit</button>
+            </div>
+            <div class="timerEditor" id="timerEditor">
+                <input id="timerEditorInput" type="text">
+                <button onclick="setEditTimer()">Set</button>
+            </div>
+        </div>
         <div class="score-container">
             <div class="foul-container">
                 <div class="foul" id="guest-foul">0</div>
