@@ -43,7 +43,7 @@ function guestFoulAdd() {
 function timer() {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
-    
+
     timerDOMlElement.textContent = `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
     time--;
 }
@@ -51,20 +51,25 @@ function timer() {
 function showEditTimer() {
     document.getElementById('showTimer').style.display = 'none';
     document.getElementById('timerEditor').style.display = 'flex';
-    console.log('clicked edit');
 }
 
 function setEditTimer() {
     document.getElementById('showTimer').style.display = 'flex';
     document.getElementById('timerEditor').style.display = 'none';
-    // setInterval(timer, 1000);
+    
 }
 
-function start(){
+function start() {
+    document.getElementById('start-btn').style.display = 'none';
+    document.getElementById('stop-btn').style.display = 'inline';
+    timerDOMlElement.style.color = '#eee'
     interval = setInterval(timer, 1000);
 }
 
-function stop(){
+function stop() {
+    document.getElementById('start-btn').style.display = 'inline';
+    document.getElementById('stop-btn').style.display = 'none';
+    timerDOMlElement.style.color = ' #F94F6D'
     clearInterval(interval);
 }
 
@@ -73,7 +78,6 @@ function reset() {
     guestScore = 0;
     homeFoul = 0;
     guestFoul = 0;
-
     getGuestScore.textContent = guestScore;
     getGuestFoul.textContent = guestFoul;
     getHomeScore.textContent = homeScore;

@@ -104,6 +104,17 @@ body{
     text-align: center;
 }
 
+#stop-btn{
+    display: none;
+    background-color: #9AABD8;
+    color: #080001;
+}
+
+#start-btn{
+    background-color: aquamarine;
+    color: #080001;
+}
+
 .score-screen{
     background-color: #080001;
     color: #F94F6D;
