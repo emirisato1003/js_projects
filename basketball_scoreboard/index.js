@@ -5,19 +5,12 @@ let guestScore = 0;
 let homeFoul = 0;
 let guestFoul = 0;
 
-let timeStartMinutes = 15;
-let time = timeStartMinutes * 60;
-
-let interval;
-
-
 const getHomeScore = document.getElementById('home-score');
 const getHomeFoul = document.getElementById('home-foul');
 const getGuestScore = document.getElementById('guest-score');
 const getGuestFoul = document.getElementById('guest-foul');
 const timerDOMlElement = document.getElementById('timer');
-
-// console.log(timer);
+const input = document.getElementById('timerEditorInput');
 
 function homeScoreAdd(point) {
     homeScore += point;
@@ -49,6 +42,7 @@ function timer() {
 }
 
 function showEditTimer() {
+    stop();
     document.getElementById('showTimer').style.display = 'none';
     document.getElementById('timerEditor').style.display = 'flex';
 }
@@ -56,22 +50,32 @@ function showEditTimer() {
 function setEditTimer() {
     document.getElementById('showTimer').style.display = 'flex';
     document.getElementById('timerEditor').style.display = 'none';
-    
+    let newMinutes = parseInt(input.value);
+    timeStartMinutes = newMinutes;
+    time = timeStartMinutes * 60;
+    start()
 }
 
 function start() {
     document.getElementById('start-btn').style.display = 'none';
     document.getElementById('stop-btn').style.display = 'inline';
-    timerDOMlElement.style.color = '#eee'
+    timerDOMlElement.style.color = '#eee';
     interval = setInterval(timer, 1000);
 }
 
 function stop() {
     document.getElementById('start-btn').style.display = 'inline';
     document.getElementById('stop-btn').style.display = 'none';
-    timerDOMlElement.style.color = ' #F94F6D'
+    timerDOMlElement.style.color = ' #F94F6D';
     clearInterval(interval);
 }
+
+
+let timeStartMinutes = 15;
+let time = timeStartMinutes * 60;
+
+let interval;
+
 
 function reset() {
     homeScore = 0;
