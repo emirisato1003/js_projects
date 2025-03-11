@@ -72,6 +72,10 @@ body{
     flex-direction: column;
 }
 
+.timer-buttons{
+    text-align: end;
+}
+
 .timer{
     font-size: 6rem;
     font-family:'Press Start 2P', system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;

@@ -8,7 +8,8 @@ let guestFoul = 0;
 let timeStartMinutes = 15;
 let time = timeStartMinutes * 60;
 
-setInterval(timer, 1000);
+let interval;
+
 
 const getHomeScore = document.getElementById('home-score');
 const getHomeFoul = document.getElementById('home-foul');
@@ -42,7 +43,7 @@ function guestFoulAdd() {
 function timer() {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
-
+    
     timerDOMlElement.textContent = `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
     time--;
 }
@@ -56,6 +57,15 @@ function showEditTimer() {
 function setEditTimer() {
     document.getElementById('showTimer').style.display = 'flex';
     document.getElementById('timerEditor').style.display = 'none';
+    // setInterval(timer, 1000);
+}
+
+function start(){
+    interval = setInterval(timer, 1000);
+}
+
+function stop(){
+    clearInterval(interval);
 }
 
 function reset() {

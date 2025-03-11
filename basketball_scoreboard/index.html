@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body  onload="start()">
     <div class="container">
         <div class="score-container">
             <div class="foul-container">
@@ -31,7 +31,11 @@
         <div class="timer-container">
             <div class="showTimer" id="showTimer">
                 <div class="timer" id="timer"></div>
-                <button onclick="showEditTimer()">Edit</button>
+                <div class="timer-buttons">
+                    <button onclick="showEditTimer()">Edit</button>
+                    <button onclick="start()">Start</button>
+                    <button onclick="stop()">Stop</button>
+                </div>
             </div>
             <div class="timerEditor" id="timerEditor">
                 <input id="timerEditorInput" type="text">
