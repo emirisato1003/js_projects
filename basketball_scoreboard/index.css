@@ -104,6 +104,11 @@ body{
     text-align: center;
 }
 
+#set-btn{
+    background-color: yellow;
+    color: #080001;
+}
+
 #stop-btn{
     display: none;
     background-color: #9AABD8;

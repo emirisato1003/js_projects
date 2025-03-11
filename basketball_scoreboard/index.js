@@ -48,6 +48,7 @@ function showEditTimer() {
 }
 
 function setEditTimer() {
+    timerDOMlElement.textContent = ""
     document.getElementById('showTimer').style.display = 'flex';
     document.getElementById('timerEditor').style.display = 'none';
     let newMinutes = parseInt(input.value);
@@ -78,6 +79,8 @@ let interval;
 
 
 function reset() {
+    showEditTimer()
+    // document.getElementById('new-game-btn').textContent = 'Start'
     homeScore = 0;
     guestScore = 0;
     homeFoul = 0;
